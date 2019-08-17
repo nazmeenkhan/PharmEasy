@@ -1,0 +1,28 @@
+form{
+border:1px solid #f1f1f1;
+margin:8% 30% 30% 30%;
+background:#f1f1f1;
+}
+
+ h1{
+text-align:center;
+font-weight:bold;
+color:Orange;
+font-size:40px;
+font-family:Rockwell;
+line-height:40px;
+}
+.cont{
+padding:10px;
+overflow:auto;}
+
+hr{
+border:1px solid black;
+margin-bottom:30px;
+}
+
+p{
+text-align:center;
+font-family:Rockwell;
+font-size:13px;
+}

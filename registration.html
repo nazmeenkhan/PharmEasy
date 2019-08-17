@@ -1,0 +1,115 @@
+<html>
+<head><title>register</title>
+<link rel="stylesheet" type="text/css" href="lr.css">
+<script type="text/javascript">
+
+function check(){
+var user=document.forms["regform"]["fname"].value;
+var add=document.forms["regform"]["address"].value;
+var ema=document.forms["regform"]["mail"].value;
+var pass=document.forms["regform"]["psw"].value;
+var mob=document.forms["regform"]["phone"].value;
+var con=isNaN(mob)
+var gen=document.getElementsByName("gender");
+var tc=document.getElementByName("tc");
+
+if(user =="" || add=="" || ema =="" || pass =="" || mob =="" )
+{
+alert("**Please fill all fields");
+return false;
+}
+if(user.length<0)
+{
+alert("**Please enter your name");
+
+return false;
+}
+if(pass.length<8 )
+{
+alert("**Password must be 8 characters lng");
+return false;
+}
+
+if(ema.indexOf( "@" , 0 ) < 0 )
+{
+alert("**Please Enter valid Email");
+return false;
+}
+
+if(con==true || mob.length<10)
+{
+alert("**Please Enter valid Mobile number");
+return false;
+}
+if(gen[0].checked==false && gen[1].checked==false && gen[2].checked==false )
+{
+alert("Please Select gender");
+return false;
+}
+if (!tc.checked)
+{
+alert("You have to agree with our upload terms in order to proceed.");
+}
+else 
+return true;
+}
+</script></head>
+<body>
+<style>
+form{
+border:1px solid #f1f1f1;
+margin:5% 20% 20% 20%;
+background:#f1f1f1;
+}
+p,label{
+font-size:20px;
+margin-right:60%; 
+}
+</style>
+<form name="regform" align=center action="done.html" target="blank" method="post" onsubmit="return check()">
+<div class="log">
+<h1>Registration</h1>
+<hr>
+
+<label >Name</label>
+<br><input name="fname" placeholder="Enter your Name" type="text" required >
+<br><br>
+
+<label >Address</label>
+<br><input name="address" size=70 placeholder="Enter your Address" type="text" required >
+<br><br>
+
+<label>Email</label>
+<br><input name="mail" placeholder="Enter Email" type="email" required >
+
+<br><br>
+
+<label >Password</label>
+<br><input name="psw" placeholder="Enter Password" type="password" required >
+<br>
+
+<label>Gender</label>
+<br>
+<input type=radio  name="gender"  value="Male" >Male &nbsp &nbsp &nbsp
+<input type=radio  name="gender" value="Female">Female &nbsp &nbsp &nbsp
+<input type=radio name="gender" value="Other">Other &nbsp &nbsp &nbsp
+<br><br>
+
+<p>Contact</p><select name="ccode"  type="number" >
+<option>+91</option><option>+92</option>
+<option>+93</option><option>+12</option>
+</select>
+
+<input name="phone"  placeholder="Enter your Mobile number" type="tel" required>
+<br><br>
+ 
+<input type="checkbox" name="tc">I Accept terms and conditions.
+<br><br>
+
+<input id="button" type="submit" value="Register"><br>
+<a href="login.html">Already have an Account?</a>
+</div>
+
+</form>
+</body>
+</html>

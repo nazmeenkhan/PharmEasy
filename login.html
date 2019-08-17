@@ -1,0 +1,72 @@
+<html>
+<head><title>login</title>
+<link rel="stylesheet" type="text/css" href="lr.css">
+<script type="text/javascript">
+
+function check(){
+var user=document.forms["logform"]["uname"].value;
+var pass=document.forms["logform"]["psw"].value;
+
+if(user =="" )
+{
+alert("**Please provide your Name!");
+return false;
+}
+
+
+if(pass =="" )
+{
+alert("**Please provide your Password!");
+return false;
+}
+
+if(user.length<6)
+{
+alert("**Please enter correct name");
+return false;
+}
+
+if(pass.length<8)
+{
+alert("**Please enter correct Password");
+return false;
+}
+
+else 
+return true;
+}
+</script>
+</head>
+<body>
+<style>
+form{
+border:1px solid #f1f1f1;
+margin:8% 30% 30% 30%;
+background:#f1f1f1;
+}
+label{
+font-size:20px;
+margin-right:60%; 
+}
+</style>
+<form name="logform" align=center action="submit.html" onsubmit="return check()">
+<div class="log">
+<h1>Login </h1>
+<hr>
+
+<label for="text">Username</label>
+<br><input name="uname" placeholder="Enter Username" type="text" >
+<br><br>
+
+<label for="psw">Password</label>
+<br><input name="psw" placeholder="Enter Password" type="password" >
+
+<br><br>
+<input id="button" type="submit" value="Login "><br>
+<a href="registration.html">or Create new Account?</a>
+
+</div>
+
+</form>
+</body>
+</html>

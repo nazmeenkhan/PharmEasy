@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function openWin() {
+    window.open("file:///C:/Users/User/Desktop/html/cartt.html");
+}
+</script>
+
+<link rel="stylesheet"
+      href="projj.css"
+      type="text/css">
+<input class=search type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for medicines.." title="Type in a name">
+</head>
+<body>
+<ul id="myUL">
+<li><a href="#">Crocin Advance Tablet</a>
+<div class=p><img src="https://res.cloudinary.com/du8msdgbj/image/upload/s--HLdnjR4P--/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/v1529325352/pjirrl6ctnfreweaqopg.jpg"><br>
+</div>
+<pre>
+type                 :       antipyretic
+Manufacture          :       GSK 
+Composition          :       Paracetamol 650 MG FormTABLET Pack Size 15 (Units) 
+DeliveryExpected     :       4 - 24 HRS
+MRP(per pack)        :       Rs. 29.00
+                             
+                             <button type="button" id="but" onclick="openWin()">Add to Cart</button>
+<hr>
+</li>
+
+
+<li><a href="#">LA Suspension</a>
+<div class=p><img src="https://res.cloudinary.com/du8msdgbj/image/upload/s--nDmevMDV--/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/v1529325509/cvolsq41rdpepkhmd9rs.jpg"><br></div>
+<pre>
+type                 :       antacid
+Manufacture          :       F D C 
+Composition          :       Aluminium hydroxide 250 MG+Magnesium hydroxide 250 
+                             MG+Oxetacaine 10 MG+Simethicone 50 MG FormSYRUP 
+Pack Size            :       1 
+DeliveryExpected     :       4 - 48 HRS
+MRP(per pack)        :       Rs. 72.00 Save upto 20%
+                             
+                             <button type="button" id="but" onclick="openWin()">Add to Cart</button>
+<hr>
+</pre>
+</li>
+
+
+
+<li><a href="#">Apdrops LP Eye drop</a>
+<div class=p><img src="https://res.cloudinary.com/du8msdgbj/image/upload/w_150,h_150,c_fit,q_auto,f_auto/v1530272298/ghsvlprunymqnfqovlbs.jpg"><br></div>
+<pre>
+type                 :       eye anti-infective
+Manufacture          :       AJANTA PHARMA 
+Composition          :       Loteprednol etabonate 5 MG+Moxifloxacin 5 MG FormDROPS
+Pack Size            :       1 
+DeliveryExpected     :       4 - 48 HRS
+MRP (per pack)       :       Rs. 146.50 Save upto 20%
+  
+                             <button type="button" id="but" onclick="openWin()">Add to Cart</button>
+<hr>
+</pre>
+</li>
+
+
+<li><a href="#">A-Ret 0.1% Gelicon</a>
+<div class=p><img src="https://res.cloudinary.com/du8msdgbj/image/upload/s--Eg8xzXcU--/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/v1529325509/yl2rliouk4mxmdij0w1v.jpg"><br></div>
+<pre>
+type                 :       acne treatment
+Manufacture          :       MENARINI 
+Composition          :       Tretinoin 0.1 %W/W FormGEL 
+Pack Size            :       1 
+DeliveryExpected     :       4 - 48 HRS
+MRP (per pack)       :       Rs. 116.00 Save upto 20%
+
+                             <button type="button" id="but" onclick="openWin()">Add to Cart</button>
+<hr>
+</pre>
+</li>
+
+
+<li><a href="#">BIGOMET M 500 /750MCG TABLET</a>
+<div class=p><img src="https://res.cloudinary.com/du8msdgbj/image/upload/s---tRbS4XG--/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/v1528455397/jjharafiekvn29fvku3i.jpg"></div>
+<pre>
+type                 :       antidiabetic agents,vitamins
+Manufacture          :       ARISTO 
+Composition          :       Metformin 500 MG+Methylcobalamin 750 MCG FormTABLET 
+                             Pack Size 10 (Units) 
+DeliveryExpected     :       4 - 48 HRS
+MRP (per pack)       :       Rs. 50.90 Save upto 20%
+
+                             <button type="button" id="but" onclick="openWin()">Add to Cart</button>
+</pre>
+</li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
